@@ -37,7 +37,10 @@ curl "http://localhost:8070/openai" -H content-type:application/json  -d '{
  }' | jq
 
 
+# UI
+kubectl -n agentgateway-system port-forward deployment/agentgateway-proxy 15000:15000
 
+URL - http://localhost:15000/ui
 
 --- KGateway not working
 # Install KGateway via Helm
